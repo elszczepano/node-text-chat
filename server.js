@@ -1,12 +1,7 @@
-const express = require('express');
-const app = express();
+const app = require('./app');
 
-app.get('/', function(req, res, next) {
-    res.json({
-        'status': 'OK!'
-    })
-});
+app.set('port', process.env.PORT || 8080);
 
-app.listen(8080, function() {
-    console.log("listening");
+const server = app.listen(app.get('port'), () => {
+    console.log(`Listening on ${server.address().port}`);
 });
