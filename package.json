@@ -1,0 +1,23 @@
+{
+  "name": "node-text-chat",
+  "version": "1.0.0",
+  "description": "Realtime text chat",
+  "main": "server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elszczepano/node-text-chat.git"
+  },
+  "author": "Dominik Szczepaniak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elszczepano/node-text-chat/issues"
+  },
+  "homepage": "https://github.com/elszczepano/node-text-chat#readme",
+  "devDependencies": {
+    "jest": "^23.1.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
