@@ -1,17 +1,41 @@
 body {
     margin: 0;
-    background: #222;
-    color: #fafafa;
+    background-color: #fafafa;
     font-family: 'Montserrat', sans-serif;
 }
-.wrapper { display: flex;
+.wrapper {
+    margin: 0 auto;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 96vh;
+    max-width: 40%;
 }
-
-h1 {
-    margin: 0;
-    font-weight: normal;
-    font-size: 70px;
+.wrapper .wrapper--text h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.wrapper .wrapper--text h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.wrapper .wrapper--text .input {
+    margin: .5rem;
+}
+.wrapper .wrapper--text .control {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+.wrapper .wrapper--text .submit {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
 }

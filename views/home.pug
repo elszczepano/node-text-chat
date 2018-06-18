@@ -1,8 +1,34 @@
 html
     head
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css")
         link(rel="stylesheet" href="css/main.css")
     body
         .wrapper
-            h1
-                | My first Express app!
+            .wrapper--text
+                h1
+                    | Welcome to the chat!
+                h2
+                    | Choose a chatroom and enter your nickname. Then click 'Enter!' and chat with other people!
+                input(class="input is-medium" type="text" placeholder="Enter your nickname")
+                .field
+                    .control
+                        div(class="select is-medium")
+                            select
+                                option
+                                    | Room 1
+                                option
+                                    | Room 2
+                                option
+                                    | Room 3
+                                option
+                                    | Room 4
+                                option
+                                    | Room 5
+                .submit
+                    a(class="button is-link is-medium")
+                        | Enter!
+        footer
+            | Copyright Dominik Szczepaniak 2018 &nbsp; | &nbsp;
+            a(href="https://devszczepaniak.pl")
+                | devszczepaniak.pl
