@@ -11,24 +11,24 @@ body {
     height: 96vh;
     max-width: 40%;
 }
-.wrapper .wrapper--text h1 {
+.wrapper .wrapper__text h1 {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
 }
-.wrapper .wrapper--text h2 {
+.wrapper .wrapper__text h2 {
     text-align: center;
     font-size: 1.5rem;
 }
-.wrapper .wrapper--text .input {
+.wrapper .wrapper__text .input {
     margin: .5rem;
 }
-.wrapper .wrapper--text .control {
+.wrapper .wrapper__text .control {
     margin: 1.5rem 0;
     display: flex;
     justify-content: center;
 }
-.wrapper .wrapper--text .submit {
+.wrapper .wrapper__text .submit {
     display: flex;
     justify-content: center;
 }

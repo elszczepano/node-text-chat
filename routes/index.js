@@ -5,4 +5,8 @@ router.get('/', (req, res) => {
     res.render('home');
 });
 
+router.get('/chatroom', (req, res) => {
+    res.render('chat');
+});
+
 module.exports = router;
