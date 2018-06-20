@@ -4,8 +4,9 @@
   "description": "Realtime text chat",
   "main": "server.js",
   "scripts": {
+    "build": "rimraf ./dist && babel ./src -d ./dist",
     "dev": "nodemon -w src/server.js --exec \"babel-node src/server.js\"",
-    "server": "nodemon server.js"
+    "server": "nodemon dist/server.js"
   },
   "repository": {
     "type": "git",
