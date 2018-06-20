@@ -4,3 +4,10 @@ exports.store = (req, res) => {
         'room': req.body.room
     });
 };
+
+exports.ifDataExists = (req, res, next) => {
+    if(req.body.room === "" || req.body.nickname === "") {
+        res.redirect('/');
+    }
+    next();
+};
