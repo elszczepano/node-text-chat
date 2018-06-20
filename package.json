@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf ./dist && babel ./src -d ./dist",
     "dev": "nodemon -w src/server.js --exec \"babel-node src/server.js\"",
-    "server": "nodemon dist/server.js"
+    "prestart": "npm run -s build",
+    "start": "nodemon dist/server.js"
   },
   "repository": {
     "type": "git",
