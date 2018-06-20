@@ -1,4 +1,5 @@
-const app = require('./app');
+import app from './app';
+
 
 app.set('port', process.env.PORT || 8080);
 

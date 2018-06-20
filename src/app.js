@@ -1,10 +1,10 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const flash = require('connect-flash');
-const session = require('express-session');
-const routes = require('./routes');
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import flash from 'connect-flash';
+import session from 'express-session';
+import routes from './routes/index';
 
 const app = express();
 
