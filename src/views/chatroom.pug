@@ -3,7 +3,19 @@ html
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css")
         link(rel="stylesheet" href="css/main.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js")
     body
         .wrapper
-            h1
-                | Chatroom!
+            .messages--wrapper
+                h1
+                    | Chatroom number 1!
+                .messages
+                    ul
+                        li Message 1
+                        li Message 2
+                        li Message 3
+                        li Message 4
+                .add-message--wrapper
+                    textarea
+                    button
+        script(src="js/chat.js" async)
