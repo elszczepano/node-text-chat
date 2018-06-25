@@ -7,8 +7,9 @@ const server = app.listen(app.get('port'), () => {
     console.log(`Listening on ${server.address().port}`);
 });
 
+//Setup Socket.io
 const io = socket(server);
 
 io.on('connection', socket => {
-    console.log('Hey, I am working now! Do not disturb!');
+    console.log('Hey, I am working now! Do not disturb!', socket.id);
 });
