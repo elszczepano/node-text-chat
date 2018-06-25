@@ -6,16 +6,29 @@ html
         script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js")
     body
         .wrapper
-            .messages--wrapper
+            .wrapper__content
                 h1
                     | Chatroom number 1!
                 .messages
                     ul
-                        li Message 1
-                        li Message 2
-                        li Message 3
-                        li Message 4
-                .add-message--wrapper
-                    textarea
-                    button
+                        li
+                            strong Mark
+                            | Hello, it's me!
+                        li
+                            strong Jose Arcadio Morales
+                            | Hello.
+                        li
+                            strong Mark
+                            | How are you?
+                        li
+                            strong Jose Arcadio Morales
+                            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget venenatis felis. Suspendisse potenti. Etiam eu leo in augue suscipit tempus. Sed elementum augue vitae accumsan hendrerit. Maecenas semper lacus nisl. Integer sollicitudin ante a felis viverra, vitae vulputate orci accumsan. Donec elit mi, accumsan sed felis et, sagittis finibus mi. Aliquam erat volutpat. Sed suscipit, libero nec porttitor ornare, nulla erat scelerisque nunc, consectetur hendrerit felis sapien ut ligula. Aliquam at laoreet turpis. Proin ultrices nulla finibus laoreet scelerisque.
+                .add-message
+                    textarea(class="textarea" placeholder="e.g. Hello world")
+                    .submit
+                        input(type="submit" value="Enter!" class="button is-link is-medium")
+        footer
+            | Copyright Dominik Szczepaniak 2018 &nbsp; | &nbsp;
+            a(href="https://devszczepaniak.pl")
+                | devszczepaniak.pl
         script(src="js/chat.js" async)
