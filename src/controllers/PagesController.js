@@ -3,4 +3,4 @@ exports.home = (req, res) => {
 };
 exports.chatroom = (req, res) => {
     res.render('chatroom');
-}
+};
