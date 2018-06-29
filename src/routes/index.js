@@ -1,15 +1,12 @@
 import express from 'express';
 const router = express.Router();
 
-const PagesController = require('../controllers/PagesController');
-const ApplicationsController = require('../controllers/ApplicationsController');
+const ChatroomController = require('../controllers/ChatroomController');
 
-router.get('/', PagesController.home);
-router.get('/chatroom', PagesController.chatroom);
+router.get('/', ChatroomController.home);
 
 router.post('/chatroom',
-    ApplicationsController.ifDataExists,
-    ApplicationsController.store
+    ChatroomController.chatroom
 );
 
 module.exports = router;
