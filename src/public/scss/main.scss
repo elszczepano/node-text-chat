@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background-color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+  max-width: 60%;
+}
+.wrapper .wrapper__content h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: .5rem 0;
+}
+.wrapper .wrapper__content h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.wrapper .wrapper__content .input {
+  margin: .5rem;
+}
+.wrapper .wrapper__content .control {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .wrapper__content .submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.wrapper .wrapper__content .messages {
+  margin-top: 2rem;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.wrapper .wrapper__content ul li {
+  font-size: 1.1rem;
+  padding: .75rem .5rem;
+  background-color: #F3F3F3;
+  display: flex;
+}
+.wrapper .wrapper__content ul li strong {
+  min-width: 8rem;
+  max-width: 8rem;
+}
+.wrapper .wrapper__content ul li:nth-child(odd) {
+  background-color: #DBDCDE;
+}
+.wrapper .wrapper__content ul li strong {
+  min-width: 8rem;
+  max-width: 8rem;
+}
+.wrapper .wrapper__content .add-message textarea {
+  font-size: 1.1rem;
+  resize: none;
+}
+.wrapper .wrapper__content .wrapper__content--link {
+  text-align: center;
+}
+footer {
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+}
