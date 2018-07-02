@@ -3,7 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV === 'development';
 
 const prodPlugins = [
     new UglifyJsPlugin()
@@ -34,5 +34,5 @@ module.exports = {
             }
         ]
     },
-    plugins: !process.env.NODE_ENV || !devMode ? basicPlugins : basicPlugins.concat(prodPlugins)
+    plugins: devMode ? basicPlugins : basicPlugins.concat(prodPlugins)
 };
