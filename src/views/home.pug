@@ -11,11 +11,11 @@ html
                 h2
                     | Choose a chatroom and enter your nickname. Then click 'Enter!' and chat with other people!
                 form(action="/chatroom" method="POST")
-                    input(class="input is-medium" type="text" placeholder="Enter your nickname" name="nickname" required)
+                    input(class="input is-medium" id="user" type="text" placeholder="Enter your nickname" name="nickname" required)
                     .field
                         .control
                             div(class="select is-medium")
-                                select(name="room")
+                                select(name="room" id="room")
                                     option(value="1")
                                         | Room 1
                                     option(value="2")
@@ -34,3 +34,4 @@ html
                     | Copyright Dominik Szczepaniak 2018 &nbsp; | &nbsp;
                 a(href="https://devszczepaniak.pl")
                     | devszczepaniak.pl
+        script(src="dist/user.js" async)

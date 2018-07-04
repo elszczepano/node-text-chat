@@ -17,10 +17,11 @@ const basicPlugins = [
 
 module.exports = {
     entry: {
-        main: path.join(__dirname, './src/public/js/index.js')
+        main: path.join(__dirname, './src/public/js/index.js'),
+        user: path.join(__dirname, './src/public/js/user.js')
     },
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'src/public/dist')
     },
     module: {
