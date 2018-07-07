@@ -11,6 +11,7 @@ body {
   max-width: 100%;
   margin: 0 20%;
   .wrapper__content {
+    width: 100%;
     h1 {
       text-align: center;
       font-size: 2rem;
@@ -30,8 +31,9 @@ body {
     }
     .messages {
       margin-top: 2rem;
-      max-height: 50vh;
+      height: 50vh;
       overflow-y: scroll;
+      background-color: #F3F3F3;
     }
     .add-message textarea {
       font-size: 1.1rem;
@@ -43,7 +45,7 @@ body {
     ul li {
       font-size: 1.1rem;
       padding: .75rem .5rem;
-      background-color: #F3F3F3;
+      background-color: #EBEBEB;
       display: flex;
       &:nth-child(odd) {
         background-color: #DBDCDE;
