@@ -6,10 +6,10 @@ html
         script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js")
     body
         .wrapper
-            div(class="wrapper__content" id="chat")
+            div(class="wrapper__content")
                 h1
                     | Chatroom number #{room}!
-                div(class="messages" id="chat-window")
+                div(class="messages")
                     ul(id="output")
                 .add-message
                     textarea(class="textarea" id="message" placeholder="e.g. Hello world")
