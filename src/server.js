@@ -12,4 +12,8 @@ const io = socket(server);
 
 io.on('connection', socket => {
     console.log('Hey, I am working now! Do not disturb!', socket.id);
+
+    socket.on('chat', function(data){
+        io.sockets.emit('chat', data);
+    });
 });
