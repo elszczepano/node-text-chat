@@ -1,21 +1,23 @@
 const socket = io.connect('http://localhost:8080');
 import '../scss/main.scss';
 
-const message = document.getElementById('message');
+const messageField = document.getElementById('message');
 const btn = document.getElementById('send');
 const output = document.getElementById('output');
 const scrollContainer = document.querySelector('.messages');
 
-btn.addEventListener('click', function(){
+btn.addEventListener('click', function() {
+    if(!messageField.value) return;
+    const message = messageField.value;
+    messageField.value = '';
     socket.emit('chat', {
-        message: message.value,
+        message: message,
         nickname: nickname
     });
+
 });
 
 socket.on('chat', function(data) {
-    if(!message.value) return;
     output.innerHTML += `<li><strong>${data.nickname}:</strong>${data.message}</li>`;
-    message.value = '';
-    scrollContainer.scrollTo(0,output.scrollHeight);
+    scrollContainer.scrollTo(0,data.scroll);
 });
