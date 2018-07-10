@@ -8,5 +8,8 @@ router.get('/', ChatroomController.home);
 router.post('/chatroom',
     ChatroomController.chatroom
 );
+router.post('/chatroom:id',
+    //ChatroomController.renderView
+);
 
 module.exports = router;
