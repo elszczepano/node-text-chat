@@ -19,6 +19,8 @@ btn.addEventListener('click', function() {
 });
 
 socket.on('chat', function(data) {
-    output.innerHTML += `<li><strong>${data.nickname}:</strong>${data.message}</li>`;
-    scrollContainer.scrollTo(0,data.scroll);
+    if(data.room === room) {
+        output.innerHTML += `<li><strong>${data.nickname}:</strong>${data.message}</li>`;
+        scrollContainer.scrollTo(0,data.scroll);
+    }
 });
