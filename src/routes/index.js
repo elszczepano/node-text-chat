@@ -5,11 +5,8 @@ const ChatroomController = require('../controllers/ChatroomController');
 
 router.get('/', ChatroomController.home);
 
-router.post('/chatroom',
+router.post('/chatroom/:id',
     ChatroomController.chatroom
-);
-router.post('/chatroom:id',
-    //ChatroomController.renderView
 );
 
 module.exports = router;
