@@ -12,7 +12,8 @@ btn.addEventListener('click', function() {
     messageField.value = '';
     socket.emit('chat', {
         message: message,
-        nickname: nickname
+        nickname: nickname,
+        room: room
     });
 
 });
