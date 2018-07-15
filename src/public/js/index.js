@@ -6,16 +6,14 @@ const btn = document.getElementById('send');
 const output = document.getElementById('output');
 const scrollContainer = document.querySelector('.messages');
 
-function getRandomColor() {
+const color = function() {
     const letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
-
-const color = getRandomColor();
+};
 
 btn.addEventListener('click', function() {
 
@@ -26,9 +24,8 @@ btn.addEventListener('click', function() {
         message: message,
         nickname: nickname,
         room: room,
-        color: color
+        color: color()
     });
-
 });
 
 socket.on('chat', function(data) {
