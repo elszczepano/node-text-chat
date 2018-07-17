@@ -55,6 +55,16 @@ body {
         max-width: 8rem;
       }
     }
+    .broadcast {
+      font-style: italic;
+      padding: .5rem .1rem;
+      color: #777;
+      min-height: 2.5rem;
+      animation-name: fade;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
   }
 }
 footer {
@@ -64,4 +74,10 @@ footer {
   background-color: #ebebeb;
   justify-items: center;
   align-content: center;
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  50% {opacity: .4;}
+  100% {opacity: 1;}
 }
