@@ -7,17 +7,17 @@ html
     body
         .wrapper
             div(class="wrapper__content")
-                h1
+                h1(class="wrapper__content__header--first")
                     | Chatroom number #{room}!
-                .messages(id="messages")
+                .wrapper__content__messages(id="messages")
                     ul(id="output")
-                .broadcast(id="broadcast")
+                .wrapper__content__broadcast(id="broadcast")
                     |
-                .add-message
+                .wrapper__content__message--add
                     textarea(class="textarea" id="message" placeholder="Say hello!")
-                    .submit
+                    .wrapper__content__form__submit
                         input(type="submit" value="Enter!" id="send" class="button is-link is-medium")
-        footer
+        footer(class="main__footer")
             div
                 span
                     | Copyright Dominik Szczepaniak 2018 &nbsp; | &nbsp;

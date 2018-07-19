@@ -12,34 +12,34 @@ body {
   margin: 0 20%;
   .wrapper__content {
     width: 100%;
-    h1 {
+    .wrapper__content__header--first {
       text-align: center;
       font-size: 2rem;
       font-weight: 700;
       margin: .5rem 0;
     }
-    h2 {
+    .wrapper__content__header--second {
       text-align: center;
       font-size: 1.5rem;
     }
-    .input {
+    .wrapper__content__form__input {
       margin-top: .5rem;
     }
-    .control, .submit {
+    .wrapper__content__form__room, .wrapper__content__form__submit {
       @include grid__center;
       margin: 1rem 0;
     }
-    .messages {
+    .wrapper__content__messages {
       margin-top: 2rem;
       height: 50vh;
       overflow-y: scroll;
       background-color: #F3F3F3;
     }
-    .add-message textarea {
+    .wrapper__content__message--add textarea {
       font-size: 1.1rem;
       resize: none;
     }
-    .wrapper__content--link {
+    .wrapper__content__link {
       text-align: center;
     }
     ul li {
@@ -55,7 +55,7 @@ body {
         max-width: 8rem;
       }
     }
-    .broadcast {
+    .wrapper__content__broadcast {
       font-style: italic;
       padding: .5rem .1rem;
       color: #777;
@@ -67,7 +67,7 @@ body {
     }
   }
 }
-footer {
+.main__footer {
   width: 100%;
   height: 4vh;
   display: grid;
