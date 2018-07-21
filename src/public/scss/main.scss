@@ -6,7 +6,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .wrapper {
-  @include grid__center;
+  @include grid--center;
   height: 96vh;
   max-width: 100%;
   margin: 0 20%;
@@ -22,11 +22,11 @@ body {
       text-align: center;
       font-size: 1.5rem;
     }
-    .wrapper__content__form__input {
+    .form__input {
       margin-top: .5rem;
     }
-    .wrapper__content__form__room, .wrapper__content__form__submit {
-      @include grid__center;
+    .form__room, .form__submit {
+      @include grid--center;
       margin: 1rem 0;
     }
     .wrapper__content__messages {

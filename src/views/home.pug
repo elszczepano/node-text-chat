@@ -10,9 +10,9 @@ html
                     | Welcome to the chat!
                 h2(class="wrapper__content__header--second")
                     | Choose a chatroom and enter your nickname. Then click 'Enter!' and chat with other people!
-                form(action="/chatroom/1" method="POST" id="joinForm" class="wrapper__content__form")
-                    input(class="input is-medium wrapper__content__form__input" id="user" type="text" placeholder="Enter your nickname" name="nickname" required)
-                    .wrapper__content__form__room
+                form(action="/chatroom/1" method="POST" id="joinForm")
+                    input(class="input is-medium form__input" id="user" type="text" placeholder="Enter your nickname" name="nickname" required)
+                    .form__room
                         div(class="select is-medium")
                             select(name="room" id="room")
                                 option(value="1")
@@ -25,7 +25,7 @@ html
                                      | Room 4
                                 option(value="5")
                                     | Room 5
-                    .wrapper__content__form__submit
+                    .form__submit
                         input(type="submit" value="Enter!" class="button is-link is-medium")
         footer(class="main__footer")
             div
