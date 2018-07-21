@@ -1,12 +1,14 @@
 const socket = io.connect('http://localhost:8080');
 import '../scss/main.scss';
 
+//Required elements handlers
 const messageField = document.getElementById('message');
 const btn = document.getElementById('send');
 const output = document.getElementById('output');
 const scrollContainer = document.getElementById('messages');
 const broadcast = document.getElementById('broadcast');
 
+//Set random color for user
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -17,6 +19,7 @@ function getRandomColor() {
 }
 const color = getRandomColor();
 
+//Emitters
 messageField.addEventListener('keypress', function() {
     socket.emit('typing',{
         room: room,
@@ -24,10 +27,9 @@ messageField.addEventListener('keypress', function() {
     });
 });
 
-btn.addEventListener('click', function() {
-
-    if(!messageField.value) return;
-    const message = messageField.value;
+//Handle sending messages
+function sendMessage(message) {
+    if(!message) return;
     messageField.value = '';
     socket.emit('chat', {
         message: message,
@@ -35,10 +37,13 @@ btn.addEventListener('click', function() {
         room: room,
         color: color
     });
+}
+
+btn.addEventListener('click', function() {
+    sendMessage(messageField.value);
 });
 
-
-
+//Getting data from socket
 socket.on('chat', function(data) {
     if(data.room === room) {
         broadcast.innerHTML = "";
