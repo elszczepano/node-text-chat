@@ -17,7 +17,7 @@ const basicPlugins = [
 
 module.exports = {
     entry: {
-        main: path.join(__dirname, './src/public/js/index.js'),
+        index: path.join(__dirname, './src/public/js/index.js'),
         room: path.join(__dirname, './src/public/js/room.js')
     },
     output: {
