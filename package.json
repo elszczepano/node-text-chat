@@ -9,7 +9,8 @@
     "watch": "webpack --watch --mode development --hot",
     "prod": "webpack --mode production --progress",
     "prestart": "npm run -s build",
-    "start": "nodemon dist/server.js"
+    "start": "nodemon dist/server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "jest": "^23.1.0",
+    "jest": "^23.4.1",
     "node-sass": "^4.9.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
