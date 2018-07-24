@@ -10,7 +10,7 @@
     "prod": "webpack --mode production --progress",
     "prestart": "npm run -s build",
     "start": "nodemon dist/server.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
