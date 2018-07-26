@@ -5,8 +5,13 @@ import cookieParser from 'cookie-parser';
 import flash from 'connect-flash';
 import session from 'express-session';
 import routes from './routes/index';
+import mongoose from 'mongoose';
 
 const app = express();
+
+//setup db connection
+mongoose.connect('mongodb://localhost/textchat');
+let db = mongoose.connection;
 
 //Static files
 app.set('views', path.join(__dirname, 'views'));

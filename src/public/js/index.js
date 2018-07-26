@@ -1,6 +1,7 @@
 const socket = io.connect('http://localhost:8080');
 import '../scss/main.scss';
 
+
 //Required elements handlers
 const messageField = document.getElementById('message');
 const btn = document.getElementById('send');
@@ -55,6 +56,5 @@ socket.on('chat', function(data) {
 socket.on('typing', function(data) {
     if(data.room === room) {
         broadcast.innerHTML = `${data.nickname} is typing a message`;
-
     }
 });
