@@ -1,6 +1,6 @@
 const socket = io.connect('http://localhost:8080');
+import {getRandomColor} from './modules/getRandomColor';
 import '../scss/main.scss';
-
 
 //Required elements handlers
 const messageField = document.getElementById('message');
@@ -10,14 +10,6 @@ const scrollContainer = document.getElementById('messages');
 const broadcast = document.getElementById('broadcast');
 
 //Set random color for user
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
 const color = getRandomColor();
 
 //Emitters
