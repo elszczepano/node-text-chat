@@ -9,10 +9,14 @@ html
             div(class="wrapper__content")
                 h1(class="wrapper__content__header--first")
                     | Chatroom number #{room}!
-                .wrapper__content__messages(id="messages")
+                .wrapper__content__messages(id="messagesBox")
                     ul(id="output")
+                        each message in messages
+                            li
+                                strong
+                                    | #{message.name}
+                                | #{message.message}
                 .wrapper__content__broadcast(id="broadcast")
-                    |
                 .wrapper__content__message--add
                     textarea(class="textarea" id="message" placeholder="Say hello!")
                     .form__submit

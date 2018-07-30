@@ -6,7 +6,7 @@ import '../scss/main.scss';
 const messageField = document.getElementById('message');
 const btn = document.getElementById('send');
 const output = document.getElementById('output');
-const scrollContainer = document.getElementById('messages');
+const scrollContainer = document.getElementById('messagesBox');
 const broadcast = document.getElementById('broadcast');
 const color = getRandomColor();
 
