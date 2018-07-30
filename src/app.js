@@ -9,9 +9,23 @@ import mongoose from 'mongoose';
 
 const app = express();
 
-//setup db connection
+
+//Setup db connection
 mongoose.connect('mongodb://localhost/textchat');
 let db = mongoose.connection;
+
+
+//Check connection
+db.once('open', function() {
+   console.log('Connected');
+});
+
+
+//Check for DB errors
+db.on('error', function(err) {
+   console.log(err);
+});
+
 
 //Static files
 app.set('views', path.join(__dirname, 'views'));

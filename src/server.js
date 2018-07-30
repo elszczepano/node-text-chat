@@ -10,6 +10,7 @@ const server = app.listen(app.get('port'), () => {
 //Setup Socket.io
 const io = socket(server);
 
+
 io.on('connection', socket => {
     socket.on('chat', function(data){
         io.sockets.emit('chat', data);
