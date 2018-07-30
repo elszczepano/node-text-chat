@@ -6,4 +6,4 @@ function getRandomColor() {
     }
     return color;
 }
-export {getRandomColor};
+export default getRandomColor;

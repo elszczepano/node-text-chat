@@ -1,5 +1,5 @@
 const socket = io.connect('http://localhost:8080');
-import {getRandomColor} from './modules/getRandomColor';
+import getRandomColor from './modules/getRandomColor';
 import '../scss/main.scss';
 
 //Required elements handlers
@@ -8,13 +8,11 @@ const btn = document.getElementById('send');
 const output = document.getElementById('output');
 const scrollContainer = document.getElementById('messages');
 const broadcast = document.getElementById('broadcast');
-
-//Set random color for user
 const color = getRandomColor();
 
 //Emitters
 messageField.addEventListener('keypress', function() {
-    socket.emit('typing',{
+    socket.emit('typing', {
         room: room,
         nickname: nickname
     });
