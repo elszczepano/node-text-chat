@@ -7,11 +7,11 @@ exports.chatroom = (req, res) => {
     if(req.body.room === "" || req.body.nickname === "") {
         res.redirect('/');
     }
-    Message.find({}, function(err, messages) {
+    Message.find().where('room').equals(req.body.room).exec((err, messages) => {
         res.render('chatroom', {
             nickname: req.body.nickname,
             room: req.body.room,
             messages: messages
         });
-    }).where('room').equals(req.body.room).exec();
+    });
 };
