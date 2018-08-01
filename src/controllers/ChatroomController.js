@@ -13,6 +13,5 @@ exports.chatroom = (req, res) => {
             room: req.body.room,
             messages: messages
         });
-    });
-
+    }).where('room').equals(req.body.room).exec();
 };
