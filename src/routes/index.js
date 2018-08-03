@@ -9,4 +9,8 @@ router.post('/chatroom/:id',
     ChatroomController.chatroom
 );
 
+router.post('/add',
+    ChatroomController.add
+);
+
 module.exports = router;

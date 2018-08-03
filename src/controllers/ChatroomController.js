@@ -3,6 +3,7 @@ const Message = require('../models/message');
 exports.home = (req, res) => {
     res.render('home');
 };
+
 exports.chatroom = (req, res) => {
     if(req.body.room === "" || req.body.nickname === "") {
         res.redirect('/');
@@ -13,5 +14,19 @@ exports.chatroom = (req, res) => {
             room: req.body.room,
             messages: messages
         });
+    });
+};
+
+exports.add = (req, res) => {
+    let message = new Message();
+    message.name = req.body.name,
+    message.message = req.body.message,
+    message.room = req.body.room
+
+    message.save(err => {
+        if(err) {
+            console.log(err);
+            return;
+        }
     });
 };
