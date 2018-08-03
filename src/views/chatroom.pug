@@ -17,7 +17,7 @@ html
                                     | #{message.name}
                                 | #{message.message}
                 .wrapper__content__broadcast(id="broadcast")
-                .wrapper__content__message--add
+                form(class="wrapper__content__message--add" method="POST")
                     textarea(class="textarea" id="message" placeholder="Say hello!")
                     .form__submit
                         input(type="submit" value="Enter!" id="send" class="button is-link is-medium")
