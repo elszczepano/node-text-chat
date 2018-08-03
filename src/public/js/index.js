@@ -1,4 +1,5 @@
 const socket = io.connect('http://localhost:8080');
+import addMessageToDatabase from './modules/addMessageToDatabase';
 import getRandomColor from './modules/getRandomColor';
 import '../scss/main.scss';
 
@@ -30,7 +31,9 @@ function sendMessage(message) {
     });
 }
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    addMessageToDatabase(messageField.value, nickname, room);
     sendMessage(messageField.value);
 });
 
