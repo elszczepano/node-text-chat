@@ -22,7 +22,6 @@ messageField.addEventListener('keypress', function() {
 //Handle sending messages
 function sendMessage(message) {
     if(!message) return;
-    messageField.value = '';
     socket.emit('chat', {
         message: message,
         nickname: nickname,
@@ -33,8 +32,12 @@ function sendMessage(message) {
 
 btn.addEventListener('click', function(event) {
     event.preventDefault();
-    addMessageToDatabase(messageField.value, nickname, room);
-    sendMessage(messageField.value);
+    let textMessage = messageField.value;
+    messageField.value = '';
+    if(textMessage.replace(/\s/g, '').length) {
+        addMessageToDatabase(textMessage, nickname, room);
+        sendMessage(textMessage);
+    }
 });
 
 //Getting data from socket
