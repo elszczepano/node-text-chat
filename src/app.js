@@ -11,7 +11,7 @@ const app = express();
 
 
 //Setup db connection
-mongoose.connect('mongodb://localhost/textchat');
+mongoose.connect('mongodb://localhost:27017/textchat',{ useNewUrlParser: true });
 let db = mongoose.connection;
 
 
