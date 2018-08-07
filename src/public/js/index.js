@@ -10,6 +10,7 @@ const output = document.getElementById('output');
 const scrollContainer = document.getElementById('messagesBox');
 const broadcast = document.getElementById('broadcast');
 const color = getRandomColor();
+scrollContainer.scrollTo(0,scrollContainer.scrollHeight);
 
 //Emitters
 messageField.addEventListener('keypress', function() {
@@ -45,7 +46,7 @@ socket.on('chat', function(data) {
     if(data.room === room) {
         broadcast.innerHTML = "";
         output.innerHTML += `<li><strong style='color:${data.color}'>${data.nickname}:</strong>${data.message}</li>`;
-        scrollContainer.scrollTo(0,data.scroll);
+        scrollContainer.scrollTo(0,scrollContainer.scrollHeight);
     }
 });
 
