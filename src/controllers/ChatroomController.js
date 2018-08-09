@@ -19,14 +19,8 @@ exports.chatroom = (req, res) => {
 
 exports.addMessageToDatabase = (req, res) => {
     let message = new Message();
-    message.name = req.body.name,
-    message.message = req.body.message,
-    message.room = req.body.room
-
-    message.save(err => {
-        if(err) {
-            console.log(err);
-            return;
-        }
-    });
+    message.name = req.body.name;
+    message.message = req.body.message;
+    message.room = req.body.room;
+    message.save(err => {if(err) console.log(err)});
 };
