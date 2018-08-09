@@ -50,7 +50,10 @@ app.use(flash());
 
 //Setup router
 app.use('/', routes);
+
+//Setup middlewares
 app.use(errorsHandler.notFound);
+app.use(errorsHandler.catchErrors);
 
 module.exports = app;
 
