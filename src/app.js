@@ -6,6 +6,7 @@ import flash from 'connect-flash';
 import session from 'express-session';
 import routes from './routes/index';
 import mongoose from 'mongoose';
+import errorsHandler from './middlewares/errors';
 
 const app = express();
 
@@ -49,10 +50,7 @@ app.use(flash());
 
 //Setup router
 app.use('/', routes);
-
-app.use((req,res, next) => {
-   res.status(404).render('404');
-});
+app.use(errorsHandler.notFound);
 
 module.exports = app;
 
