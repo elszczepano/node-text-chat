@@ -17,7 +17,7 @@ exports.chatroom = (req, res) => {
     });
 };
 
-exports.add = (req, res) => {
+exports.addMessageToDatabase = (req, res) => {
     let message = new Message();
     message.name = req.body.name,
     message.message = req.body.message,

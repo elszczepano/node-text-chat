@@ -10,7 +10,7 @@ router.post('/chatroom/:id',
 );
 
 router.post('/add',
-    ChatroomController.add
+    ChatroomController.addMessageToDatabase
 );
 
 module.exports = router;
