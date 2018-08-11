@@ -22,5 +22,5 @@ exports.addMessageToDatabase = (req, res) => {
     message.name = req.body.name;
     message.message = req.body.message;
     message.room = req.body.room;
-    message.save(err => {if(err) console.log(err)});
+    message.save();
 };
