@@ -12,14 +12,6 @@ const broadcast = document.getElementById('broadcast');
 const color = getRandomColor();
 scrollContainer.scrollTo(0,scrollContainer.scrollHeight);
 
-//Emitters
-messageField.addEventListener('keypress', function() {
-    socket.emit('typing', {
-        room: room,
-        nickname: nickname
-    });
-});
-
 //Handle sending messages
 function sendMessage(message) {
     if(!message) return;
@@ -31,7 +23,7 @@ function sendMessage(message) {
     });
 }
 
-btn.addEventListener('click', function(event) {
+function triggerSendMessage(event) {
     event.preventDefault();
     let textMessage = messageField.value;
     messageField.value = '';
@@ -39,13 +31,27 @@ btn.addEventListener('click', function(event) {
         addMessageToDatabase(textMessage, nickname, room);
         sendMessage(textMessage);
     }
+}
+
+//Handle "typing message"
+messageField.addEventListener('keypress', function(event) {
+    socket.emit('typing', {
+        room: room,
+        nickname: nickname
+    });
+    if(event.keyCode === 13 && !event.shiftKey) {
+        triggerSendMessage(event);
+    }
+});
+btn.addEventListener('click', function(event) {
+    triggerSendMessage(event);
 });
 
 //Getting data from socket
 socket.on('chat', function(data) {
     if(data.room === room) {
         broadcast.innerHTML = "";
-        output.innerHTML += `<li><strong style='color:${data.color}'>${data.nickname}:</strong>${data.message}</li>`;
+        output.innerHTML += `<li class="message"><strong class="message--name" style='color:${data.color}'>${data.nickname}:</strong>${data.message}</li>`;
         scrollContainer.scrollTo(0,scrollContainer.scrollHeight);
     }
 });
