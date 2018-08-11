@@ -10,11 +10,11 @@ html
                 h1(class="wrapper__content__header--first")
                     | Chatroom number #{room}!
                 .wrapper__content__messages(id="messagesBox")
-                    ul(id="output")
+                    ul(id="output" class="message__list")
                         each message in messages
-                            li
-                                strong
-                                    | #{message.name}
+                            li(class="message")
+                                strong(class="message--name")
+                                    | #{message.name}:
                                 | #{message.message}
                 .wrapper__content__broadcast(id="broadcast")
                 form(class="wrapper__content__message--add" method="POST")
