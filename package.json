@@ -1,7 +1,7 @@
 {
   "name": "node-text-chat",
   "version": "1.0.0",
-  "description": "Realtime text chat",
+  "description": "Real-time Node.js text chat",
   "main": "server.js",
   "scripts": {
     "build": "rimraf ./dist && babel ./src -d ./dist",
