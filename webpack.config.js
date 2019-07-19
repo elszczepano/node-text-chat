@@ -1,6 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 const devMode = process.env.NODE_ENV === 'development';
@@ -10,7 +10,7 @@ const prodPlugins = [
 ];
 
 const basicPlugins = [
-    new CleanWebpackPlugin('src/public/dist'),
+    new CleanWebpackPlugin(),
     new ExtractTextPlugin('style.css')
 ];
 
